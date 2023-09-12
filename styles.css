@@ -667,25 +667,5 @@ img:hover {
 
 /*=============================== responsive ========================*/
 
-/* Default styles for larger screens */
-.main {
-    /* Your existing styles here */
-}
-
-/* Media query for screens up to 768px wide */
-@media screen and (max-width: 768px) {
-    .main {
-        width: 90%; /* Adjust the width as needed */
-        margin: 20px;
-    }
-}
-
-/* Media query for screens up to 480px wide */
-@media screen and (max-width: 480px) {
-    .main {
-        width: 100%; /* Adjust the width as needed */
-        margin: 10px;
-    }
-}
 
 
