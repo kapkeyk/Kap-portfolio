@@ -1,0 +1,691 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f4955c, #2b4259);
+}
+
+
+.main {
+    display: flex;
+    margin: 50px;
+    width: 443px;
+    background-color: #eae3b8; /* Example background color */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.whole-page {
+    display: flex;
+    justify-content: center;
+    width: 451px;
+    margin-bottom: 20px;
+}
+
+.name {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #2b4259;
+    padding: 10px;
+    margin: 5px 10px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    
+}
+
+.name > h1 {
+    font-size: 24px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fdaf19;
+} 
+
+.name > h2 {
+    margin-top: -1px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    0% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}
+
+.name > h2 {
+    animation: slide-in 1s ease;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.name > h1 {
+    animation: slide-in 0.7s ease;
+}
+
+
+.name > img {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: 4px #fdaf19 outset;
+}
+
+img  {
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.content {
+    overflow: auto; 
+    max-height: 505px;
+    scroll-behavior: smooth;
+    width: 411px;
+    margin-top: 20px;
+}
+
+/* Hide the scrollbar in supported browsers */
+.content {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Hide the scrollbar for webkit-based browsers */
+.content::-webkit-scrollbar {
+    width: 0.5em; /* Set a small width */
+}
+
+/* Hide the scrollbar track */
+.content::-webkit-scrollbar-track {
+    background: transparent; /* Make it transparent */
+}
+
+/* Hide the scrollbar thumb (the draggable part) */
+.content::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Make it transparent */
+}
+
+
+.about {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #2b4259;
+    padding: 40px 40px;
+    
+}
+
+.about > h1 {
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    margin-bottom: 10px;
+}
+
+.about > p {
+    font-size: 14px;
+    line-height: 25px;
+    border-left: 3px #2b4259 solid;
+    padding-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.about > p:hover {
+    color: #fdaf19;
+}
+
+.icons {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.icons a {
+    color: #2b4259;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 40px 30px 0;
+}
+
+.icons a  {
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.icons a:hover {
+    background-color: #f4955c;
+    
+}
+
+/* Styles for the sidebar navigation */
+.sidebar-nav {
+    width: 60px; /* Set the width of the sidebar as needed */
+    background-color: #2b4259; /* Example background color */
+    color: #f7c55d;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    margin-top: 150px;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+/* Styles for the navigation items */
+.nav-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.nav-item a:hover {
+    background-color: #fdaf19;
+    color: #2b4259;
+    
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f7c55d;
+    padding: 50px 30px 60px;
+    margin-top: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #2b4259;
+    position: relative;
+    margin-top: 5px;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #fdaf19;
+    position: absolute;
+    transition: width 0.3s ease;
+    text-align: center;
+    color: #2b4259;
+    font-weight: bold;
+}
+
+.skills > h1 {
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    color: #fdaf19;
+    background-color: #2b4259;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.skill > .skill-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    color: #2b4259;
+
+    
+}
+
+.experiences {
+    background-color: #2b4259;
+    border-left: 5px #f4955c solid;
+    margin: 40px 0;
+    height: 500px;
+    padding-top: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+
+.first-work {
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 370px;
+    padding: 10px 5px 20px;
+}
+
+.first-work > img {
+    height: 120px;
+    width: 120px;
+}
+
+.description {
+    color: #fdaf19;
+}
+
+.description > h1 {
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #2b4259;
+    background-color: #fdaf19;
+    padding: 5px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.description > P {
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px #fdaf19 solid;
+}
+
+.second-work {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    padding: 10px 9px;
+    background-color: #f7c55d;
+}
+
+.second-work > img {
+    height: 120px;
+    width: 120px;
+}
+
+.description-second > h1 {
+    text-align: center;
+    font-size: 14px;
+    color: #2b4259;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #fdaf19;
+    background-color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.description-second > p {
+    font-size: 12px;
+    color: #2b4259;
+    font-weight: bold;
+    line-height: 15px;
+    padding-right: 2px;
+    border-right: 5px #2b4259 solid;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.third-work {
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    margin-bottom: 10px;
+    padding: 20px 5px 20px;
+}
+
+.third-work > img {
+    height: 120px;
+    width: 120px;
+}
+
+.description-third h1 {
+    text-align: center;
+    font-size: 18px;
+    color: #2b4259;
+    background-color: #fdaf19;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.description-third > p {
+    font-size: 12px;
+    color: #fdaf19;
+    font-weight: bold;
+    line-height: 15px;
+    padding-left: 10px;
+    border-left: 5px #fdaf19 solid;
+}
+
+.education {
+    height: 500px;
+}
+
+.education > h1 {
+    font-size: 20px;
+    padding-top: 45px;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #2b4259;
+}
+
+.tertiary { /*pag buong page, dito ang adjust sa top*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 57px;
+    padding: 20px 0 20px 10px;
+}
+
+.tertiary > h1 {
+    font-size: 18px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.tertiary-educ {
+    border-left: 5px #2b4259 solid;
+    padding-left: 10px;
+}
+
+.tertiary-educ > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.tertiary-educ > h1:hover {
+    color: #fdaf19;
+}
+
+.tertiary-educ > p {
+    font-size: 12px;
+}
+
+.senior {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 20px 10px;
+}
+
+.senior-educ {
+    border-left: 5px #2b4259 solid;
+    padding-left: 10px;
+}
+
+.senior > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.senior-educ > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.senior-educ > h1:hover {
+    color: #fdaf19;
+}
+
+.senior-educ > p {
+    font-size: 12px;
+}
+
+/*=========================================================*/
+
+.junior { /*pag buong page, dito ang adjust sa top*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.junior > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.junior-educ {
+    border-left: 5px #2b4259 solid;
+    padding-left: 10px;
+}
+
+.junior-educ > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.junior-educ > h1:hover {
+    color: #fdaf19;
+}
+
+.junior-educ > p {
+    font-size: 12px;
+}
+
+.elementary { /*pag buong page, dito ang adjust sa top*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 43px;
+    padding: 20px 0 20px 10px;
+}
+
+.elementary > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.elementary-educ {
+    border-left: 5px #2b4259 solid;
+    padding-left: 10px;
+}
+
+.elementary-educ > h1 {
+    font-size: 16px;
+    color: #2b4259;
+    font-family: 'Space Grotesk', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.elementary-educ > h1:hover {
+    color: #fdaf19;
+}
+
+.elementary-educ > p {
+    font-size: 12px;
+}
+
+.certificate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #f7c55d
+}
+
+.tesda {
+    background-color: #2b4259;
+    border: 5px #eae3b8 solid;
+    color: #fdaf19;
+    margin: 10px 40px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease;
+}
+
+.tesda:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.tesda > h1 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.tesda-descript {
+    padding-left: 20px;
+}
+
+.tesda-descript > h2 {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.tesda-descript > p {
+    font-size: 12px;
+    padding-left: 10px;
+    border-left: 5px #f4955c solid;
+}
+
+/*-----------------------------------------------*/
+
+.first-cyber {
+    background-color: #2b4259;
+    border: 5px #eae3b8 solid;
+    color: #fdaf19;
+    margin: 10px 40px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease;
+}
+
+.first-cyber:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.first-cyber > h1 {
+    font-size: 16px;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.first-cyber > p {
+    font-size: 12px;
+    padding-left: 10px;
+    border-left: 5px #f4955c solid;
+}
+
+/********************************************/
+
+
+.certs > h1 {
+    background-color: #2b4259;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px 0;
+    color: #fdaf19;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/*-----------------------------------------------*/
+
+.second-cyber {
+    background-color: #2b4259;
+    border: 5px #eae3b8 solid;
+    color: #fdaf19;
+    margin: 10px 40px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 10px;
+    transform: scale(1); /* Initial scale */
+    transition: transform 0.3s ease;
+}
+
+.second-cyber:hover {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.second-cyber > h1 {
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.second-cyber > p {
+    font-size: 12px;
+    padding-left: 10px;
+    border-left: 5px #f4955c solid;
+}
+
+
+/*=============================== responsive ========================*/
+
+/* Default styles for larger screens */
+.main {
+    /* Your existing styles here */
+}
+
+/* Media query for screens up to 768px wide */
+@media screen and (max-width: 768px) {
+    .main {
+        width: 90%; /* Adjust the width as needed */
+        margin: 20px;
+    }
+}
+
+/* Media query for screens up to 480px wide */
+@media screen and (max-width: 480px) {
+    .main {
+        width: 100%; /* Adjust the width as needed */
+        margin: 10px;
+    }
+}
+
+

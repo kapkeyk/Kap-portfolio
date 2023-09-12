@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="main"> 
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item"><a href="#profile"><i class="fas fa-user"></i></a></li>
+                    <li class="nav-item"><a href="#skills"><i class="fas fa-code"></i></a></li>
+                    <li class="nav-item"><a href="#experiences"><i class="fas fa-briefcase"></i></a></li>
+                    <li class="nav-item"><a href="#education"><i class="fas fa-school"></i></a></li>
+                    <li class="nav-item"><a href="#certificate"><i class="fas fa-certificate"></i></a></li>
+                </ul>
+            </nav> 
+        <div class="whole-page">
+            <div class="content">
+                <div class="name"  id="profile">
+                    <img src="idpic.jpg" alt="me">
+                    <h1>Prince Carlo Tero</h1>
+                    <h2>An Aspiring Web Developer | Designer</h2>
+                </div>
+                <div class="about">
+                    <h1>About</h1>
+                    <p>
+                        Capable of basic front-end and back-end
+                        programming, animation and possesses
+                        exceptional organizational skills.
+                        Ready to work hard and learn on the job.
+                    </p>
+                </div>
+                <div class="icons">
+                    <a href="https://web.facebook.com/Kkeyk020"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/prince-carlo-tero-55511320a/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/kapkeyk"><i class="fab fa-github"></i></a>
+                    <a href="https://mail.google.com/mail/u/0/?pli=1"><i class="far fa-envelope"></i></a>
+                </div>
+                <div class="skills" id="skills">
+                    <h1>SKILLS</h1>
+                    <div class="skill">
+                        <span class="skill-name">HTML</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="html-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">CSS</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="css-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Javascript</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="db-progress" data-progress="30"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">Database</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="db-progress" data-progress="50"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">C Language</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="db-progress" data-progress="60"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">C Sharp</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="db-progress" data-progress="40"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span class="skill-name">PHP</span>
+                        <div class="progress-bar">
+                            <div class="progress" id="db-progress" data-progress="60"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    const skills = document.querySelectorAll('.skill');
+            
+                    skills.forEach(skill => {
+                        const progressBar = skill.querySelector('.progress');
+                        const progress = progressBar.getAttribute('data-progress');
+            
+                        skill.addEventListener('mouseenter', () => {
+                            progressBar.style.width = progress + '%';
+                            progressBar.textContent = progress + '%';
+                        });
+            
+                        skill.addEventListener('mouseleave', () => {
+                            progressBar.style.width = '0';
+                            progressBar.textContent = '';
+                        });
+                    });
+                </script>
+
+                <div class="experiences" id="experiences">
+                    <div class="works">
+                        <div class="first-work">
+                            <img src="delivery.png" alt="Porter">
+                            <div class="description">
+                                <h1>FOODPANDA RIDER</h1>
+                                <p>APRIL 21, 2022 - CURRENT</p>
+                                <p>SAN JUAN CITY</p>
+                                <p>-- DELIVERY RIDER --</p>
+                            </div>
+                        </div>
+                        <div class="second-work">
+                            <div class="description-second">
+                                <h1>GOLDEN ARCHES DEVELOPMENT CORPORATION</h1>
+                                <p>MAY 9, 2019 - OCTOBER 11, 2021</p>
+                                <p>GREENHILLS, SAN JUAN CITY</p>
+                                <p>-- SERVICE CREW --</p>
+                            </div>
+                            <img src="cleaning.png" alt="Crew">
+                        </div>
+                        <div class="third-work">
+                            <img src="call.png" alt="Call">
+                            <div class="description-third">
+                                <h1>CONCENTRIX</h1>
+                                <p>SEPTEMBER 27, 2021 - JANUARY 3, 2022</p>
+                                <p>WCC SHAW BLVD, MANDALUYONG CITY, METRO MANILA</p>
+                                <p>-- CUSTOMER ASSOCICATE --</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="education" id="education">
+                    <h1>-- EDUCATION --</h1>
+                    <div class="tertiary">
+                        <h1>TERTIARY</h1>
+                        <div class="tertiary-educ">
+                            <h1>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1>
+                            <p>SAN JUAN BRANCH</p>
+                            <p>JUNE 17, 2019 - CURRENT</p>
+                        </div>
+                    </div>
+                    <div class="senior">
+                        <h1>SENIOR HIGHSCHOOL</h1>
+                        <div class="senior-educ">
+                            <h1>SAN JUAN NATIONAL SENIOR HIGH SCHOOL</h1>
+                            <p>SAN JUAN CITY</p>
+                            <p>2017 - 2019</p>
+                        </div>
+                    </div>
+                    <div class="junior">
+                        <h1>JUNIOR HIGHSCHOOL</h1>
+                        <div class="junior-educ">
+                            <h1>SAN JUAN NATIONAL HIGH SCHOOL</h1>
+                            <p>SAN JUAN CITY</p>
+                            <p>2013 - 2017</p>
+                        </div>
+                    </div>
+                    <div class="elementary">
+                        <h1>ELEMENTARY SCHOOL</h1>
+                        <div class="elementary-educ">
+                            <h1>PARAISO ELEMENTARY SCHOOL</h1>
+                            <p>PARAISO, MABINI, BOHOL</p>
+                            <p>2007 - 2013</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate" id="certificate">
+                    <div class="certs">
+                        <h1>CERTIFICATES</h1>
+                        <div class="tesda">
+                            <h1>NATIONAL CERTIFICATES II</h1>
+                            <div class="tesda-descript">
+                                <h2>Technical Education and Skills Development Authority</h2>
+                                <p>Issued: December 13, 2018</p>
+                                <p>Expires: December 12, 2023</p>
+                                <p>Relevant Skills: Animation</p>
+                            </div>
+                        </div>
+                        <div class="first-cyber">
+                            <h1>Introduction to Email Threats and Security Attacks</h1>
+                            <p>Trend Micro, Miguel Ang <br>November 19, 2020</p>
+                        </div>
+                        <div class="second-cyber">
+                            <h1>Introduction to Malware Threats</h1>
+                            <p>Trend Micro, Raphael Corteno <br>October 22, 2020</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--main end div-->
+</body>
+</html>
